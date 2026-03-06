@@ -158,8 +158,9 @@ strong{color:var(--c-white);font-weight:600}
 .feat-card p{font-size:12px;color:var(--c-muted);margin:0}
 
 /* Price row */
-.price-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
-@media(max-width:700px){.price-row{grid-template-columns:1fr}}
+.price-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+@media(max-width:900px){.price-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.price-row{grid-template-columns:1fr}}
 .price-card{background:var(--c-char2);border:1px solid var(--c-border2);border-radius:14px;padding:24px;text-align:center;position:relative}
 .price-card.featured{border-color:var(--c-gold);background:linear-gradient(180deg,rgba(226,192,116,.06),var(--c-char2))}
 .price-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--c-gold);color:var(--c-black);font-family:var(--f-m);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 14px;border-radius:20px}
@@ -299,7 +300,7 @@ strong{color:var(--c-white);font-weight:600}
 <ul>
 <li><strong>Instant</strong> — modelo rapido para conversas do dia a dia. E o que roda quando voce abre o ChatGPT e comecar a digitar.</li>
 <li><strong>Thinking</strong> — modelo que "pensa" antes de responder. Raciocina passo a passo para tarefas complexas (analises, codigo, pesquisa). Equivalente ao antigo o1/o3.</li>
-<li><strong>Pro</strong> — versao com raciocinio estendido (pensa por ainda mais tempo). Disponivel apenas nos planos Pro ($200/mes) e Enterprise.</li>
+<li><strong>Pro</strong> — versao com raciocinio estendido (pensa por ainda mais tempo). Disponivel apenas nos planos Pro (R$ 1.058/mes) e Enterprise.</li>
 <li><strong>Codex</strong> — variante otimizada para programacao e tarefas agenticasas (o modelo "faz coisas" sozinho, como um estagiario digital).</li>
 </ul>
 <div class="callout callout-info">
@@ -485,7 +486,7 @@ Publico: <span class="ph">[quem vai ler]</span>.</div>
 <table>
 <thead><tr><th>Caracteristica</th><th>GPT-5.4 Thinking</th><th>GPT-5.4 Pro</th></tr></thead>
 <tbody>
-<tr><td>Disponivel em</td><td>Plus ($20), Team, Pro, Enterprise</td><td>Pro ($200) e Enterprise</td></tr>
+<tr><td>Disponivel em</td><td>Plus (~R$ 106), Team, Pro, Enterprise</td><td>Pro (~R$ 1.058) e Enterprise</td></tr>
 <tr><td>Raciocinio</td><td>Avancado</td><td>Maximo (pensa por mais tempo)</td></tr>
 <tr><td>Velocidade</td><td><span class="pill pill-g">Rapido</span></td><td><span class="pill pill-y">Mais lento</span></td></tr>
 <tr><td>Precisao</td><td><span class="pill pill-g">Alta</span></td><td><span class="pill pill-g">Maxima</span></td></tr>
@@ -964,7 +965,7 @@ Regras:
 <tr><td>Raciocinio</td><td><span class="pill pill-y">Basico</span></td><td><span class="pill pill-g">Avancado</span></td></tr>
 <tr><td>Contexto maximo</td><td>Padrao</td><td>1M tokens (API)</td></tr>
 <tr><td>Computer Use</td><td><span class="pill pill-r">Nao</span></td><td><span class="pill pill-g">Sim (nativo)</span></td></tr>
-<tr><td>Custo (ChatGPT)</td><td>Incluso em todos os planos</td><td>Plus ($20) e acima</td></tr>
+<tr><td>Custo (ChatGPT)</td><td>Incluso em todos os planos</td><td>Plus (~R$ 106) e acima</td></tr>
 <tr><td>Ideal para</td><td>Conversas rapidas, redacao, busca</td><td>Analises, codigo, documentos</td></tr>
 <tr><td>Tom</td><td><span class="pill pill-g">Natural e direto</span></td><td><span class="pill pill-g">Preciso e detalhado</span></td></tr>
 <tr><td>Skills</td><td>Limitado</td><td><span class="pill pill-g">Suporte completo</span></td></tr>
@@ -994,7 +995,7 @@ Regras:
 <tbody>
 <tr><td>Modelo principal</td><td>GPT-5.4 Thinking</td><td>Claude Opus 4.6</td><td>Gemini 3.1 Pro</td></tr>
 <tr><td>Contexto maximo</td><td>1M tokens</td><td>200K tokens</td><td>1M+ tokens</td></tr>
-<tr><td>Preco base</td><td>$20/mes (Plus)</td><td>$20/mes (Pro)</td><td>$19.99/mes (Advanced)</td></tr>
+<tr><td>Preco base</td><td>~R$ 106/mes (Plus)</td><td>~R$ 106/mes (Pro)</td><td>~R$ 106/mes (Advanced)</td></tr>
 <tr><td>Computer Use</td><td><span class="pill pill-g">Nativo</span></td><td><span class="pill pill-g">Beta</span></td><td><span class="pill pill-y">Limitado</span></td></tr>
 <tr><td>Excel/Sheets</td><td><span class="pill pill-g">Nativo</span></td><td><span class="pill pill-g">Cowork</span></td><td><span class="pill pill-g">Workspace</span></td></tr>
 <tr><td>Codigo (agentes)</td><td><span class="pill pill-g">Codex</span></td><td><span class="pill pill-g">Claude Code</span></td><td><span class="pill pill-y">Code Assist</span></td></tr>
@@ -1097,40 +1098,57 @@ Regras:
 <section class="sec-header reveal">
 <div class="sec-sup">Investimento</div>
 <h2>Planos e <span class="gold">Precos</span></h2>
-<p class="sec-desc">Valores oficiais dos planos ChatGPT e custos de API para os novos modelos.</p>
+<p class="sec-desc">Valores dos planos ChatGPT em reais (conversao com dolar a R$ 5,29 — marco/2026). O plano Go tem preco local fixo no Brasil.</p>
 
 <div class="price-row">
 <div class="price-card">
 <div class="price-name">Free</div>
-<div class="price-val">$0 <small>/mes</small></div>
+<div class="price-val">R$ 0 <small>/mes</small></div>
 <ul class="price-list">
 <li>GPT-5.3 Instant (limitado)</li>
 <li>GPT-5.4 via roteamento automatico</li>
+<li>10 msgs a cada 5 horas</li>
 <li>Busca na web basica</li>
-<li>Limite de mensagens</li>
+<li>2-3 imagens/dia</li>
+</ul>
+</div>
+<div class="price-card">
+<div class="price-name">Go</div>
+<div class="price-val">R$ 39,99 <small>/mes</small></div>
+<ul class="price-list">
+<li>GPT-5.3 Instant (ampliado)</li>
+<li>Limites maiores que o Free</li>
+<li>Geracao de imagens</li>
+<li>Upload de arquivos</li>
+<li>Memoria estendida</li>
+<li>Sem acesso a Sora e Codex</li>
 </ul>
 </div>
 <div class="price-card featured">
 <div class="price-badge">Mais Popular</div>
 <div class="price-name">Plus</div>
-<div class="price-val">$20 <small>/mes</small></div>
+<div class="price-val">~R$ 106 <small>/mes</small></div>
+<div style="font-family:var(--f-m);font-size:9px;color:var(--c-muted);margin-bottom:8px">US$ 20/mes</div>
 <ul class="price-list">
 <li>GPT-5.3 Instant (ilimitado)</li>
 <li>GPT-5.4 Thinking</li>
 <li>Deep Research completo</li>
 <li>Skills e Apps</li>
-<li>ChatGPT para Excel (beta)</li>
+<li>Sora (video 720p, 5s)</li>
 <li>Codex com limites</li>
+<li>ChatGPT para Excel (beta)</li>
 </ul>
 </div>
 <div class="price-card">
 <div class="price-name">Pro</div>
-<div class="price-val">$200 <small>/mes</small></div>
+<div class="price-val">~R$ 1.058 <small>/mes</small></div>
+<div style="font-family:var(--f-m);font-size:9px;color:var(--c-muted);margin-bottom:8px">US$ 200/mes</div>
 <ul class="price-list">
 <li>Tudo do Plus</li>
 <li>GPT-5.4 Pro (raciocinio maximo)</li>
 <li>Codex expandido</li>
-<li>Limites ampliados em tudo</li>
+<li>Sem limites de mensagem</li>
+<li>250 Deep Research/mes</li>
 <li>Acesso antecipado a novos recursos</li>
 </ul>
 </div>
@@ -1147,7 +1165,7 @@ Regras:
 
 <div class="faq-item" data-faq>
 <div class="faq-q"><span>Preciso pagar para usar o GPT-5.4?</span><div class="faq-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></div>
-<div class="faq-a"><div class="faq-a-inner"><p>Nao necessariamente. Usuarios gratuitos tem acesso ao GPT-5.4 quando o roteador automatico direciona perguntas complexas para esse modelo. Porem, para acesso consistente e completo (incluindo Skills, Deep Research e modo Thinking), voce precisa do plano Plus ($20/mes) ou superior.</p></div></div>
+<div class="faq-a"><div class="faq-a-inner"><p>Nao necessariamente. Usuarios gratuitos tem acesso ao GPT-5.4 quando o roteador automatico direciona perguntas complexas para esse modelo. Porem, para acesso consistente e completo (incluindo Skills, Deep Research e modo Thinking), voce precisa do plano Plus (~R$ 106/mes) ou superior. Se o orcamento e mais limitado, o plano Go (R$ 39,99/mes) ja oferece limites bem maiores que o gratuito.</p></div></div>
 </div>
 
 <div class="faq-item" data-faq>
